@@ -3,7 +3,7 @@ function kmeans_test
 
 	rand("seed", 31415926);
 	% observations
-	m = 10000;
+	m = 4000;
 	% dimenson of x
 	k = 10;
 	% number of clusters
@@ -24,7 +24,6 @@ function kmeans_test
 	clock_start = clock();
 	[clusters2 mu2] = kmeans2(X, p);
 	clock_stop = clock();
-	etime(clock_stop, clock_start)	
 	disp("Algorithm 2 finished in "), disp(etime(clock_stop, clock_start))
 	
 	% Print differences in mu

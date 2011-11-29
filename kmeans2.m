@@ -1,4 +1,6 @@
 % Run kmeans on X with n cluster centers.
+% Using distance.m  (folded into this code)
+% as per David Chudzicki's suggestion.
 function [clusters, mu] = kmeans2(X, n)
 
 	% This is needed for the distance step
@@ -29,7 +31,7 @@ function [clusters, mu] = kmeans2(X, n)
 		end	
 
 		% check convergence
-		conv = sum(sum( (mu_next - mu) .^2 ))
+		conv = sum(sum( (mu_next - mu) .^2 ));
 		mu = mu_next;
 
 		% arbitrary breaking point

@@ -23,7 +23,7 @@ function [clusters, mu] = kmeans(X, n)
 		end	
 
 		% check convergence
-		conv = sum(sum( (mu_next - mu) .^2 ))
+		conv = sum(sum( (mu_next - mu) .^2 ));
 		mu = mu_next;
 
 		% arbitrary breaking point
