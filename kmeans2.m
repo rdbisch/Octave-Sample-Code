@@ -5,7 +5,7 @@ function [clusters, mu] = kmeans2(X, n)
 
 	% This is needed for the distance step
 	%  but there is no need to recompute it every loop.
-	xx = sum(X .* X, 2)';
+	xx = sum(X .* X, 2);
 
 	m = rows(X);
 	% Randomly initialize cluster centers
@@ -19,8 +19,8 @@ function [clusters, mu] = kmeans2(X, n)
 
 		% Compute the distance and assign the cluster in one swoop
 		[minv clusters] = min(
-			(sqrt(repmat(xx',[1 size(mumu, 2)])
-			+ repmat(mumu, [size(xx, 2) 1])
+			(sqrt(repmat(xx,[1 size(mumu, 2)])
+			+ repmat(mumu, [size(xx, 1) 1])
 			- 2*Xmu))'
 		);
 
