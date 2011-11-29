@@ -1,0 +1,2 @@
+This code is toy-code to try to implement the K-means algorithm in Octave.  kmeans.m was the first attempt;  kmeans2.m was the second attempt with some faster vectorization.
+
